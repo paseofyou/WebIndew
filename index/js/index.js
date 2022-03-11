@@ -17,6 +17,8 @@ function getFileName(path) {
         return path.substring(pos + 1);
 }
 
+
+
 function btnOpen(avg) {
     if (avg !== "") {
         let my_file;
@@ -26,8 +28,8 @@ function btnOpen(avg) {
                 break
             }
         }
-        let myUrl = my_file["ab"]
-        window.open(myUrl, "new2", "height=1000,wight=500,top=50");
+        let myUrl = encodeURIComponent(server+"/in_file");
+        window.open("./doc.html?url="+myUrl+"&ab="+encodeURIComponent(my_file["ab"]), "new2", "height=1000,wight=500,top=50");
     } else {
         window.alert("error");
     }

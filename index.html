@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <title>indexSystem</title>
+    <link rel="stylesheet" href="index/plugins/bootstrap-3.3.7/dist/css/bootstrap.css" />
+    <style>
+        .filesIcon {
+            max-height: 20px;
+        }
+
+        .fileIcon {
+            max-height: 20px;
+        }
+
+        .fileNameDiv {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .header {
+            font-weight: bold;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            background-color: #F2F7FD;
+        }
+
+        .header:hover {
+            background-color: #D3E5FC;
+        }
+
+        .dataRow {
+            padding-bottom: 5px;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+
+        .dataRow:hover {
+            background: -webkit-linear-gradient(#F2F7FD, #C9DDF6, #F2F7FD);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#F2F7FD, #C9DDF6, #F2F7FD);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#F2F7FD, #C9DDF6, #F2F7FD);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(#F2F7FD, #C9DDF6, #F2F7FD);
+            /* 标准的语法（必须放在最后） */
+            background-color: #F2F7FD;
+            border: 1px solid #B8D6FB;
+        }
+
+        .dataRow.selected {
+            background: -webkit-linear-gradient(#F2F7FD, #98C2F8, #F2F7FD);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#F2F7FD, #98C2F8, #F2F7FD);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#F2F7FD, #98C2F8, #F2F7FD);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(#F2F7FD, #98C2F8, #F2F7FD);
+            /* 标准的语法（必须放在最后） */
+            background-color: #D0E3FC;
+            border: 1px solid #7DA2CE;
+        }
+
+        .description {
+            padding: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div> 
+        <input id="btnget" type="button" value="刷新" />
+        请在这里输入服务器url：<input id="myUrl" type="text" size=100/><!--value="http://"-->
+        <div id="now_path" ></div>
+    </div>
+    <div class="container-fluid" id="boxes">
+        <div class="row fileManager_header">
+            <div class="col-md-6 col-sm-6 col-xs-8 header">标题</div>
+            <div class="col-md-2 col-sm-3 col-xs-4 header">所在路径</div>
+        </div>
+        <div id="fileData"></div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="index/plugins/jquery-3.2.1.js"></script>
+<script src="index/plugins/layer/layer.js"></script>
+<script src="index/js/RightMenu.js"></script>
+<script src="index/js/index.js"></script>
